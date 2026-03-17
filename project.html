@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails du Projet - Thomas Jennen</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Specific Styles for Project Page */
+        .project-hero {
+            height: 70vh;
+            min-height: 500px;
+            display: flex;
+            align-items: flex-end;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-color: var(--bg-dark);
+        }
+        .project-hero::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(to top, var(--bg-darker) 0%, rgba(5,5,6,0.2) 100%);
+        }
+        .project-hero-content {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            padding-bottom: 4rem;
+        }
+        .project-hero h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--accent-color);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            transition: var(--transition);
+        }
+        .back-link:hover {
+            gap: 15px;
+            color: var(--accent-hover);
+        }
+        .project-details-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+        .project-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .project-content p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+        .project-meta-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            padding: 2.5rem;
+            border-radius: 8px;
+            position: sticky;
+            top: 120px;
+        }
+        .meta-item {
+            margin-bottom: 1.5rem;
+        }
+        .meta-item h4 {
+            color: var(--text-secondary);
+            font-family: var(--font-primary);
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 0.5rem;
+        }
+        .meta-item p {
+            font-size: 1.2rem;
+            color: var(--text-primary);
+        }
+
+        /* Image Gallery inside Project */
+        .project-gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .project-gallery img {
+            border-radius: 8px;
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+        }
+        @media (max-width: 768px) {
+            .project-details-grid { grid-template-columns: 1fr; }
+            .project-hero h1 { font-size: 2.5rem; }
+            .project-gallery { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation (Simplified for subpages) -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Thomas Jennen.</a>
+            <ul class="nav-links">
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#projets">Projets</a></li>
+                <li><a href="index.html#contact" class="btn-primary-small">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Project Hero Placeholder (Modified by Script) -->
+    <header class="project-hero" id="project-hero" style="background-image: url('https://images.unsplash.com/photo-1613490901591-ce5840924905?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+        <div class="container project-hero-content reveal">
+            <a href="index.html" class="back-link">&larr; Retour à l'accueil</a>
+            <h1 id="project-title">Titre du Projet</h1>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container project-details-grid">
+            <!-- Left Content -->
+            <div class="project-content reveal">
+                <h2>À propos de cette réalisation</h2>
+                <p id="project-desc">Description détaillée de la réalisation. Une approche architecturale qui privilégie la lumière naturelle et l'intégration harmonieuse avec le paysage environnant. Le choix des matériaux a fait l'objet d'une réflexion approfondie pour garantir durabilité et esthétique.</p>
+                <p>La performance énergétique (PEB) a été optimisée grâce à une isolation de pointe, des systèmes de chauffage efficients et une ventilation double flux. Le résultat final offre un confort de vie exceptionnel tout en minimisant l'empreinte écologique.</p>
+                
+                <div class="project-gallery reveal">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Intérieur projet">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Extérieur projet">
+                </div>
+            </div>
+
+            <!-- Right Sidebar -->
+            <div class="project-meta sidebar reveal" style="transition-delay: 0.2s;">
+                <div class="project-meta-card">
+                    <div class="meta-item">
+                        <h4>Type d'Intervention</h4>
+                        <p id="project-role">Mission d'Architecture complète</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Statut</h4>
+                        <p>Achevé</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Performance Énergétique</h4>
+                        <p>Label A+</p>
+                    </div>
+                    <div class="meta-item">
+                        <h4>Localisation</h4>
+                        <p>Bruxelles Environ</p>
+                    </div>
+                    <a href="index.html#contact" class="btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Lancer votre projet</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="logo">Thomas Jennen.</a>
+                    <p>Ingénieur civil architecte respectueux de l'environnement, de la technique et de l'esthétique.</p>
+                </div>
+                <!-- Other footer info -->
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>📍 Rue de l'Exemple 123, 1000 Bruxelles</p>
+                    <p>📞 <a href="tel:+32400000000">+32 400 00 00 00</a></p>
+                    <p>✉️ <a href="mailto:contact@thomasjennen.be">contact@thomasjennen.be</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Thomas Jennen. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

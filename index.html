@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thomas Jennen - Ingénieur civil architecte</title>
+    <meta name="description" content="Portfolio de Thomas Jennen, Ingénieur civil architecte. Expertise et Certificats PEB.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">Thomas Jennen.</a>
+            <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#peb">Certificats PEB</a></li>
+                <li><a href="#expertises">Expertises</a></li>
+                <li><a href="#projets">Projets</a></li>
+                <li><a href="#contact" class="btn-primary-small">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero" id="home">
+        <div class="hero-content reveal">
+            <p class="subtitle">Ingénieur civil architecte</p>
+            <h1>Concevoir l'avenir, <br><span class="highlight">optimiser le présent.</span></h1>
+            <p class="hero-description">Expert en performance énergétique, conception architecturale et expertises immobilières.</p>
+            <div class="hero-actions">
+                <a href="#projets" class="btn-primary">Découvrir mes projets</a>
+                <a href="#services" class="btn-secondary">Mes services</a>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="line"></div>
+        </div>
+    </header>
+
+    <!-- Services Overview -->
+    <section class="services section" id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Mes <span class="highlight">Services</span></h2>
+                <p>Une expertise globale pour vos projets immobiliers.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal" style="transition-delay: 0.1s;">
+                    <div class="icon">🌿</div>
+                    <h3>Certificats PEB</h3>
+                    <p>Évaluation précise de la performance énergétique de vos bâtiments.</p>
+                    <a href="#peb" class="service-link">En savoir plus &rarr;</a>
+                </div>
+                <div class="service-card reveal" style="transition-delay: 0.2s;">
+                    <div class="icon">📐</div>
+                    <h3>Expertises</h3>
+                    <p>Évaluations immobilières et conseils techniques spécialisés.</p>
+                    <a href="#expertises" class="service-link">En savoir plus &rarr;</a>
+                </div>
+                <div class="service-card reveal" style="transition-delay: 0.3s;">
+                    <div class="icon">🏛️</div>
+                    <h3>Architecture</h3>
+                    <p>Conception et réalisation de projets architecturaux sur mesure.</p>
+                    <a href="#projets" class="service-link">Voir les projets &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certificats PEB Section -->
+    <section class="peb-section section dark-bg" id="peb">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Certificats <span class="highlight">PEB</span></h2>
+                <p>Transparence et efficacité. Découvrez nos tarifs et nos dernières évaluations.</p>
+            </div>
+
+            <!-- Pricing Table -->
+            <div class="pricing-container reveal">
+                <h3>Tarifs Indicatifs</h3>
+                <div class="table-wrapper">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>Type de bien</th>
+                                <th>Surface (m²)</th>
+                                <th>Prix (TVAC)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Studio</td>
+                                <td>< 50 m²</td>
+                                <td><strong>150 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Appartement 1 ch.</td>
+                                <td>50 - 80 m²</td>
+                                <td><strong>180 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Appartement 2+ ch.</td>
+                                <td>> 80 m²</td>
+                                <td><strong>210 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Maison 2/3 façades</td>
+                                <td>Jusqu'à 150 m²</td>
+                                <td><strong>250 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Maison 4 façades</td>
+                                <td>Jusqu'à 250 m²</td>
+                                <td><strong>300 €</strong></td>
+                            </tr>
+                            <tr>
+                                <td>Grands bâtiments</td>
+                                <td>> 250 m²</td>
+                                <td><strong>Sur devis</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- PEB Gallery -->
+            <div class="gallery-container reveal">
+                <h3>Dernières réalisations PEB</h3>
+                <div class="masonry-gallery">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Maison moderne">
+                        <div class="overlay">
+                            <span>Maison 4 façades - Label A</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Intérieur lumineux">
+                        <div class="overlay">
+                            <span>Appartement - Label B</span>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Cuisine ouverte">
+                        <div class="overlay">
+                            <span>Rénovation - Label B</span>
+                        </div>
+                    </div>
+                     <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Design extérieur">
+                        <div class="overlay">
+                            <span>Villa contemporaine - Label A+</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expertises Section -->
+    <section class="expertises section" id="expertises">
+        <div class="container">
+            <div class="expertises-content reveal">
+                <div class="text-content">
+                    <h2>Vos <span class="highlight">Expertises</span></h2>
+                    <p class="lead">Une analyse rigoureuse et impartiale de votre bien immobilier.</p>
+                    <p>En tant qu'ingénieur civil architecte, je mets mes connaissances techniques à votre service pour :</p>
+                    <ul class="expertise-list">
+                        <li><span>✔</span> Évaluation de la valeur vénale d'un bien.</li>
+                        <li><span>✔</span> États des lieux détaillés (entrée/sortie, locatifs ou avant travaux).</li>
+                        <li><span>✔</span> Avis techniques sur l'état d'un bâtiment (fissures, humidité, stabilité).</li>
+                        <li><span>✔</span> Réception provisoire et définitive de travaux.</li>
+                    </ul>
+                    <a href="#contact" class="btn-primary mt-4">Demander une expertise</a>
+                </div>
+                <!-- Image placeholder, using a beautiful generic minimal architecture image -->
+                <div class="image-content">
+                     <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bureau d'architecture" class="main-img">
+                     <div class="experience-badge">
+                        <span class="number">10+</span>
+                        <span class="text">Années d'expérience</span>
+                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects section dark-bg" id="projets">
+        <div class="container">
+            <div class="section-header reveal">
+                <h2>Mes <span class="highlight">Projets</span></h2>
+                <p>Découvrez une sélection de mes réalisations architecturales.</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <a href="project.html?id=1" class="project-card reveal">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1613490901591-ce5840924905?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Villa Contemporaine">
+                    </div>
+                    <div class="project-info">
+                        <h3>Villa Contemporaine</h3>
+                        <p>Nouvelle construction</p>
+                    </div>
+                </a>
+                
+                <!-- Project 2 -->
+                <a href="project.html?id=2" class="project-card reveal" style="transition-delay: 0.1s;">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Rénovation Urbaine">
+                    </div>
+                    <div class="project-info">
+                        <h3>Rénovation Urbaine</h3>
+                        <p>Transformation complète</p>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="project.html?id=3" class="project-card reveal" style="transition-delay: 0.2s;">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1c24240f58?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Design Intérieur Minimaliste">
+                    </div>
+                    <div class="project-info">
+                        <h3>Espace Minimaliste</h3>
+                        <p>Aménagement intérieur</p>
+                    </div>
+                </a>
+                <!-- Project 4 -->
+                <a href="project.html?id=4" class="project-card reveal" style="transition-delay: 0.3s;">
+                    <div class="project-img">
+                        <img src="https://images.unsplash.com/photo-1528909514045-2f4461f0fb98?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bureaux Modernes">
+                    </div>
+                    <div class="project-info">
+                        <h3>Espace Professionnel</h3>
+                        <p>Bureaux & locaux</p>
+                    </div>
+                </a>
+            </div>
+            
+            <div class="text-center mt-5">
+                 <a href="#contact" class="btn-secondary">Discuter de votre projet</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer class="footer" id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="#" class="logo">Thomas Jennen.</a>
+                    <p>Ingénieur civil architecte passionné par la conception durable, la performance énergétique et la rigueur technique.</p>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p>📍 Rue de l'Exemple 123, 1000 Bruxelles</p>
+                    <p>📞 <a href="tel:+32400000000">+32 400 00 00 00</a></p>
+                    <p>✉️ <a href="mailto:contact@thomasjennen.be">contact@thomasjennen.be</a></p>
+                </div>
+                <div class="footer-links">
+                    <h4>Liens Rapides</h4>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#peb">PEB</a></li>
+                        <li><a href="#expertises">Expertises</a></li>
+                        <li><a href="#projets">Projets</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Thomas Jennen. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
