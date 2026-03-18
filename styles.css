@@ -489,6 +489,31 @@ h1, h2, h3, h4, .logo {
 }
 
 /* =========================================
+   Photo Grid 4 Columns
+   ========================================= */
+.photo-grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+}
+
+.photo-grid-4 .gallery-item {
+    aspect-ratio: 1 / 1;
+}
+
+@media (max-width: 992px) {
+    .photo-grid-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .photo-grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
    Expertises Section
    ========================================= */
 .expertises-content {
