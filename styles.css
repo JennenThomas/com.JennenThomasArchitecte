@@ -225,12 +225,12 @@ h1, h2, h3, h4, .logo {
     content: '';
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
-    background-size: cover;
+    background-image: url('images/LOGO_Thomas_jennen_archi_vide.png');
+    background-size: contain;
     background-position: center;
+    background-repeat: no-repeat;
     opacity: 0.15;
     z-index: -1;
-    filter: grayscale(100%);
 }
 
 .hero-content {
