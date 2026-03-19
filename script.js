@@ -62,14 +62,19 @@ document.addEventListener('DOMContentLoaded', () => {
         const projects = {
             '1': { 
                 title: 'Olive guess house', 
-                desc: "Il s'agit d'un projet réalisé dans le cadre d'un concours au portugal pour une maison d'hôte dans une oliveraie. L’objectif : offrir une expérience immersive en connexion avec le paysage. Pour un confort optimal, le projet mise sur la terre crue, alliant authenticité et bien-être. L'ensemble fonctionne en créant une continuité entre le dehors et le dedans. Le tout organisé autour d'un espace séjour central se voulant le plus chaleureux et confort possible. Projet réalisé en collaboration avec Rodrigue Bourdouch, Anthony Michalik et Théo collignon.", 
+                descHTML: "<p>Ce projet, réalisé dans le cadre d'un concours au Portugal, porte sur la conception d'une maison d'hôte nichée au cœur d'une oliveraie.</p><p>L'objectif principal est d'offrir aux visiteurs une expérience totalement immersive, en connexion directe avec le paysage environnant. Pour garantir un confort optimal, le projet met à l'honneur la terre crue, un matériau qui allie authenticité et bien-être.</p><p>L'ensemble de l'architecture fonctionne en créant une continuité fluide entre les espaces extérieurs et intérieurs. Le cœur du projet s'articule autour d'un vaste espace de séjour central, conçu pour être le plus chaleureux et confortable possible.</p>", 
                 role: 'Concours', 
+                collab: 'Rodrigue Bourdouch, Anthony Michalik, Théo Collignon',
+                statut: 'Proposition de concours',
+                loc: 'Portugal',
                 img: 'images/Portugal_1.jpg',
+                heroBgSize: 'contain',
+                heroBgPosition: 'center',
                 gallery: ['images/Portugal_2.png', 'images/Portugal_3.png', 'images/Portugal_4.jpg']
             },
-            '2': { title: 'Rénovation Urbaine', desc: 'Transformation complète d\'une maison de maître typique.', role: 'Rénovation & PEB', img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
-            '3': { title: 'Espace Minimaliste', desc: 'Aménagement intérieur épuré et optimisation de l\'espace.', role: 'Architecture d\'intérieur', img: 'https://images.unsplash.com/photo-1502672260266-1c1c24240f58?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
-            '4': { title: 'Espace Professionnel', desc: 'Conception de bureaux modernes et ergonomiques.', role: 'Conception globale', img: 'https://images.unsplash.com/photo-1528909514045-2f4461f0fb98?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' }
+            '2': { title: 'Rénovation Urbaine', desc: 'Transformation complète d\'une maison de maître typique.', role: 'Rénovation', statut: 'Achevé', peb: 'Label A+', loc: 'Bruxelles Environ', img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
+            '3': { title: 'Espace Minimaliste', desc: 'Aménagement intérieur épuré et optimisation de l\'espace.', role: 'Architecture d\'intérieur', statut: 'Achevé', peb: 'Label A+', loc: 'Liège', img: 'https://images.unsplash.com/photo-1502672260266-1c1c24240f58?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
+            '4': { title: 'Espace Professionnel', desc: 'Conception de bureaux modernes et ergonomiques.', role: 'Conception globale', statut: 'En cours', peb: 'Label A', loc: 'Namur', img: 'https://images.unsplash.com/photo-1528909514045-2f4461f0fb98?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' }
         };
 
         const proj = projects[projectId];
@@ -77,13 +82,45 @@ document.addEventListener('DOMContentLoaded', () => {
             document.title = proj.title + " - Thomas Jennen";
             document.getElementById('project-title').innerText = proj.title;
             const hero = document.getElementById('project-hero');
-            if(hero) hero.style.backgroundImage = `url('${proj.img}')`;
+            if(hero) {
+                hero.style.backgroundImage = `url('${proj.img}')`;
+                if(proj.heroBgSize) hero.style.backgroundSize = proj.heroBgSize;
+                if(proj.heroBgPosition) hero.style.backgroundPosition = proj.heroBgPosition;
+            }
             
-            const desc = document.getElementById('project-desc');
-            if(desc) desc.innerText = proj.desc;
+            const descContainer = document.getElementById('project-desc-container');
+            if(descContainer) {
+                if(proj.descHTML) {
+                    descContainer.innerHTML = proj.descHTML;
+                } else if(proj.desc) {
+                    descContainer.innerHTML = `<p id="project-desc">${proj.desc}</p>`;
+                }
+            }
 
             const role = document.getElementById('project-role');
-            if(role) role.innerText = proj.role;
+            if(role) role.innerText = proj.role || 'Mission d\'Architecture complète';
+
+            const statut = document.getElementById('project-statut');
+            if(statut) statut.innerText = proj.statut || 'Achevé';
+
+            const loc = document.getElementById('project-loc');
+            if(loc) loc.innerText = proj.loc || 'Belgique';
+
+            const collabContainer = document.getElementById('meta-collab-container');
+            if(proj.collab && collabContainer) {
+                document.getElementById('project-collab').innerText = proj.collab;
+                collabContainer.style.display = 'block';
+            } else if(collabContainer) {
+                collabContainer.style.display = 'none';
+            }
+
+            const pebContainer = document.getElementById('meta-peb-container');
+            if(proj.peb && pebContainer) {
+                document.getElementById('project-peb').innerText = proj.peb;
+                pebContainer.style.display = 'block';
+            } else if(pebContainer) {
+                pebContainer.style.display = 'none';
+            }
 
             if (proj.gallery) {
                 const galleryContainer = document.querySelector('.project-gallery');

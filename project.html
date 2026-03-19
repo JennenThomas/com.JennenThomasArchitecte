@@ -104,6 +104,16 @@
             width: 100%;
             height: 350px;
             object-fit: cover;
+            transition: all 0.4s ease;
+            cursor: pointer;
+            background: var(--bg-dark);
+        }
+        .project-gallery img:hover {
+            object-fit: contain;
+            transform: scale(1.1);
+            z-index: 10;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
         }
         .project-gallery img:last-child:nth-child(odd) {
             grid-column: 1 / -1;
@@ -143,8 +153,9 @@
             <!-- Left Content -->
             <div class="project-content reveal">
                 <h2>À propos de cette réalisation</h2>
-                <p id="project-desc">Description détaillée de la réalisation. Une approche architecturale qui privilégie la lumière naturelle et l'intégration harmonieuse avec le paysage environnant. Le choix des matériaux a fait l'objet d'une réflexion approfondie pour garantir durabilité et esthétique.</p>
-                <p>La performance énergétique (PEB) a été optimisée grâce à une isolation de pointe, des systèmes de chauffage efficients et une ventilation double flux. Le résultat final offre un confort de vie exceptionnel tout en minimisant l'empreinte écologique.</p>
+                <div id="project-desc-container">
+                    <p id="project-desc">Description détaillée de la réalisation.</p>
+                </div>
                 
                 <div class="project-gallery reveal">
                     <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Intérieur projet">
@@ -159,17 +170,21 @@
                         <h4>Type d'Intervention</h4>
                         <p id="project-role">Mission d'Architecture complète</p>
                     </div>
-                    <div class="meta-item">
-                        <h4>Statut</h4>
-                        <p>Achevé</p>
+                    <div class="meta-item" id="meta-collab-container" style="display: none;">
+                        <h4>Collaborateurs</h4>
+                        <p id="project-collab"></p>
                     </div>
-                    <div class="meta-item">
+                    <div class="meta-item" id="meta-statut-container">
+                        <h4>Statut</h4>
+                        <p id="project-statut">Achevé</p>
+                    </div>
+                    <div class="meta-item" id="meta-peb-container" style="display: none;">
                         <h4>Performance Énergétique</h4>
-                        <p>Label A+</p>
+                        <p id="project-peb"></p>
                     </div>
                     <div class="meta-item">
                         <h4>Localisation</h4>
-                        <p>Bruxelles Environ</p>
+                        <p id="project-loc">Bruxelles Environ</p>
                     </div>
                     <a href="index.html#contact" class="btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Lancer votre projet</a>
                 </div>
