@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Expertises - Thomas Jennen</title>
-    <meta name="description" content="Expertises immobilières par Thomas Jennen, Ingénieur civil architecte.">
+    <title>L'Équipe - Thomas Jennen</title>
+    <meta name="description" content="Découvrez le parcours et l'expérience de Thomas Jennen, Ingénieur civil architecte.">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +22,47 @@
             border-bottom: 1px solid var(--border-color);
             text-align: center;
         }
+        .team-section {
+            padding: 5rem 0;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        .team-image img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: block;
+            margin: 0 auto;
+        }
+        .team-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .team-content h3 {
+            color: var(--accent-color);
+            margin-bottom: 1.5rem;
+            font-weight: 400;
+            font-family: var(--font-secondary);
+            font-style: italic;
+            font-size: 1.5rem;
+        }
+        .team-content p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 1.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -34,7 +75,7 @@
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="peb.html">Certificats PEB</a></li>
                 <li><a href="expertises.html">Expertises</a></li>
-                <li><a href="equipe.html" target="_blank">Équipe</a></li>
+                <li><a href="equipe.html" class="active">Équipe</a></li>
                 <li><a href="index.html#projets">Projets</a></li>
                 <li><a href="index.html#contact" class="btn-primary-small">Contact</a></li>
             </ul>
@@ -48,33 +89,21 @@
 
     <header class="page-hero" style="margin-top: 5rem;">
         <div class="container reveal">
-            <h1>Vos <span class="highlight">Expertises</span></h1>
+            <h1>L'<span class="highlight">Équipe</span></h1>
         </div>
     </header>
 
-    <!-- Expertises Section -->
-    <section class="expertises section" id="expertises">
-        <div class="container">
-            <div class="expertises-content reveal">
-                <div class="text-content">
-                    <p class="lead">Une analyse rigoureuse et impartiale de votre bien immobilier.</p>
-                    <p>En tant qu'ingénieur civil architecte, je mets mes connaissances techniques à votre service pour :</p>
-                    <ul class="expertise-list">
-                        <li><span>✔</span> Évaluation de la valeur vénale d'un bien.</li>
-                        <li><span>✔</span> États des lieux détaillés (entrée/sortie, locatifs ou avant travaux).</li>
-                        <li><span>✔</span> Avis techniques sur l'état d'un bâtiment (fissures, humidité, stabilité).</li>
-                        <li><span>✔</span> Réception provisoire et définitive de travaux.</li>
-                    </ul>
-                    <a href="index.html#contact" class="btn-primary mt-4">Demander une expertise</a>
-                </div>
-                <!-- Image placeholder, using a beautiful generic minimal architecture image -->
-                <div class="image-content">
-                     <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Bureau d'architecture" class="main-img">
-                     <div class="experience-badge">
-                        <span class="number">10+</span>
-                        <span class="text">Années d'expérience</span>
-                     </div>
-                </div>
+    <section class="team-section section">
+        <div class="container team-grid">
+            <div class="team-image reveal">
+                <img src="images/thomas_jennen.png" alt="Thomas Jennen">
+            </div>
+            <div class="team-content reveal" style="transition-delay: 0.2s;">
+                <h2>Thomas Jennen</h2>
+                <h3>Ingénieur civil architecte</h3>
+                <p>Passionné par la conception durable et l'optimisation énergétique, je mets mon expertise au service de vos projets architecturaux et immobiliers. Avec une solide formation d'ingénieur civil architecte, j'allie la rigueur technique à la vision esthétique pour concevoir des espaces de vie à la fois performants et harmonieux.</p>
+                <p>Fort de plusieurs années d'expérience dans la réalisation de certificats PEB, d'expertises immobilières et de projets sur mesure, je vous accompagne avec professionnalisme à chaque étape de votre démarche. Mon objectif est de vous apporter des solutions concrètes et innovantes adaptées à vos besoins spécifiques.</p>
+                <a href="index.html#contact" class="btn-primary mt-4">Me contacter</a>
             </div>
         </div>
     </section>
