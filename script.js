@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 img: 'images/Portugal_1.jpg',
                 heroBgSize: 'contain',
                 heroBgPosition: 'center',
-                gallery: ['images/Portugal_2.png', 'images/Portugal_3.png', 'images/Portugal_4.jpg']
+                gallery: ['images/Portugal_5.png', 'images/Portugal_6.png', 'images/Portugal_7.png', 'images/Portugal_8.png', 'images/Portugal_9.jpg', 'images/Portugal_10.jpg', 'images/Portugal_2.png', 'images/Portugal_3.png', 'images/Portugal_4.jpg']
             },
             '2': { title: 'Rénovation Urbaine', desc: 'Transformation complète d\'une maison de maître typique.', role: 'Rénovation', statut: 'Achevé', peb: 'Label A+', loc: 'Bruxelles Environ', img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
             '3': { title: 'Espace Minimaliste', desc: 'Aménagement intérieur épuré et optimisation de l\'espace.', role: 'Architecture d\'intérieur', statut: 'Achevé', peb: 'Label A+', loc: 'Liège', img: 'https://images.unsplash.com/photo-1502672260266-1c1c24240f58?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
