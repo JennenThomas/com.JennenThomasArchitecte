@@ -105,6 +105,9 @@
             height: 350px;
             object-fit: cover;
         }
+        .project-gallery img:last-child:nth-child(odd) {
+            grid-column: 1 / -1;
+        }
         @media (max-width: 768px) {
             .project-details-grid { grid-template-columns: 1fr; }
             .project-hero h1 { font-size: 2.5rem; }
@@ -117,7 +120,7 @@
     <!-- Navigation (Simplified for subpages) -->
     <nav class="navbar scrolled" id="navbar">
         <div class="nav-container">
-            <a href="index.html" class="logo">Thomas Jennen.</a>
+            <a href="index.html" class="logo"><img src="images/Logo_noir.png" alt="Thomas Jennen" style="height: 40px;"></a>
             <ul class="nav-links">
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#projets">Projets</a></li>
@@ -179,7 +182,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <a href="index.html" class="logo">Thomas Jennen.</a>
+                    <a href="index.html" class="logo"><img src="images/Logo_noir.png" alt="Thomas Jennen" style="height: 40px;"></a>
                     <p>Ingénieur civil architecte respectueux de l'environnement, de la technique et de l'esthétique.</p>
                 </div>
                 <!-- Other footer info -->
