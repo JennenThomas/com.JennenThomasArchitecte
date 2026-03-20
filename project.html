@@ -99,23 +99,25 @@
             gap: 2rem;
             margin-top: 4rem;
         }
-        .project-gallery img {
+        .gallery-item {
+            overflow: hidden;
             border-radius: 8px;
             width: 100%;
             height: 350px;
-            object-fit: cover;
-            transition: all 0.4s ease;
             cursor: pointer;
             background: var(--bg-dark);
         }
-        .project-gallery img:hover {
-            object-fit: contain;
-            transform: scale(1.1);
-            z-index: 10;
-            position: relative;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.8);
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            display: block;
         }
-        .project-gallery img:last-child:nth-child(odd) {
+        .gallery-item:hover img {
+            transform: scale(1.03);
+        }
+        .gallery-item:last-child:nth-child(odd) {
             grid-column: 1 / -1;
         }
         @media (max-width: 768px) {
@@ -158,8 +160,12 @@
                 </div>
                 
                 <div class="project-gallery reveal">
-                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Intérieur projet">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Extérieur projet">
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Intérieur projet">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Extérieur projet">
+                    </div>
                 </div>
             </div>
 

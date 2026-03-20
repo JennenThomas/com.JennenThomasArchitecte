@@ -127,10 +127,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (galleryContainer) {
                     galleryContainer.innerHTML = '';
                     proj.gallery.forEach(imgSrc => {
+                        const wrapper = document.createElement('div');
+                        wrapper.className = 'gallery-item';
                         const img = document.createElement('img');
                         img.src = imgSrc;
                         img.alt = proj.title;
-                        galleryContainer.appendChild(img);
+                        wrapper.appendChild(img);
+                        galleryContainer.appendChild(wrapper);
                     });
                 }
             }
