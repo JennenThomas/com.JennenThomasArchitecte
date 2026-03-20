@@ -608,6 +608,7 @@ h1, h2, h3, h4, .logo {
     overflow: hidden;
     border: 1px solid var(--border-color);
     transition: var(--transition);
+    position: relative;
 }
 
 .project-card:hover {
@@ -633,21 +634,53 @@ h1, h2, h3, h4, .logo {
 }
 
 .project-info {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     padding: 2rem;
+    background: rgba(0, 0, 0, 0.75);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.project-card:hover .project-info {
+    opacity: 1;
 }
 
 .project-info h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin-bottom: 0.5rem;
     font-family: var(--font-primary);
-    font-weight: 400;
+    font-weight: 800;
+    color: #fff;
+    transform: translateY(20px);
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+.project-card:hover .project-info h3 {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 .project-info p {
-    color: var(--text-secondary);
+    color: var(--accent-color);
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    font-weight: 600;
+    transform: translateY(20px);
+    transition: transform 0.4s ease 0.1s, opacity 0.4s ease 0.1s;
+    opacity: 0;
+}
+
+.project-card:hover .project-info p {
+    transform: translateY(0);
+    opacity: 1;
 }
 
 /* =========================================
