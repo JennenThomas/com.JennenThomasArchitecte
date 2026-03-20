@@ -94,36 +94,32 @@
 
         /* Image Gallery inside Project */
         .project-gallery {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
+            column-count: 2;
+            column-gap: 2rem;
             margin-top: 4rem;
         }
         .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 2rem;
             overflow: hidden;
             border-radius: 8px;
             width: 100%;
-            height: 350px;
             cursor: pointer;
             background: var(--bg-dark);
         }
         .gallery-item img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto;
             transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
             display: block;
         }
         .gallery-item:hover img {
             transform: scale(1.03);
         }
-        .gallery-item:last-child:nth-child(odd) {
-            grid-column: 1 / -1;
-        }
         @media (max-width: 768px) {
             .project-details-grid { grid-template-columns: 1fr; }
             .project-hero h1 { font-size: 2.5rem; }
-            .project-gallery { grid-template-columns: 1fr; }
+            .project-gallery { column-count: 1; }
         }
     </style>
 </head>
