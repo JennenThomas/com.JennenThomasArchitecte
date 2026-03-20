@@ -81,11 +81,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (proj) {
             document.title = proj.title + " - Thomas Jennen";
             document.getElementById('project-title').innerText = proj.title;
-            const hero = document.getElementById('project-hero');
-            if(hero) {
-                hero.style.backgroundImage = `url('${proj.img}')`;
-                if(proj.heroBgSize) hero.style.backgroundSize = proj.heroBgSize;
-                if(proj.heroBgPosition) hero.style.backgroundPosition = proj.heroBgPosition;
+            const mainImg = document.getElementById('project-main-image');
+            if(mainImg) {
+                mainImg.src = proj.img;
             }
             
             const descContainer = document.getElementById('project-desc-container');

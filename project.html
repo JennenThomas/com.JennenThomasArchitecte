@@ -11,31 +11,28 @@
     <link rel="stylesheet" href="styles.css">
     <style>
         /* Specific Styles for Project Page */
-        .project-hero {
-            height: 70vh;
-            min-height: 500px;
-            display: flex;
-            align-items: flex-end;
-            position: relative;
-            background-size: cover;
-            background-position: center;
-            background-color: var(--bg-dark);
+        .project-page-header {
+            padding-top: 120px;
+            margin-bottom: 2rem;
         }
-        .project-hero::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: linear-gradient(to top, var(--bg-darker) 0%, rgba(5,5,6,0.2) 100%);
-        }
-        .project-hero-content {
-            position: relative;
-            z-index: 10;
+        .project-main-image-container {
+            border-radius: 8px;
+            overflow: hidden;
             width: 100%;
-            padding-bottom: 4rem;
+            height: 100%;
+            min-height: 400px;
         }
-        .project-hero h1 {
-            font-size: 4rem;
+        .project-main-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        #project-title {
+            font-size: 3.5rem;
             margin-bottom: 1rem;
+            line-height: 1.1;
+            color: var(--text-primary);
         }
         .back-link {
             display: inline-flex;
@@ -138,57 +135,59 @@
         </div>
     </nav>
 
-    <!-- Project Hero Placeholder (Modified by Script) -->
-    <header class="project-hero" id="project-hero" style="background-image: url('https://images.unsplash.com/photo-1613490901591-ce5840924905?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
-        <div class="container project-hero-content reveal">
+    <!-- Project Main Section -->
+    <section class="section project-page-header" id="project-header">
+        <div class="container">
             <a href="index.html" class="back-link">&larr; Retour à l'accueil</a>
-            <h1 id="project-title">Titre du Projet</h1>
-        </div>
-    </header>
-
-    <section class="section">
-        <div class="container project-details-grid">
-            <!-- Left Content -->
-            <div class="project-content reveal">
-                <h2>À propos de cette réalisation</h2>
-                <div id="project-desc-container">
-                    <p id="project-desc">Description détaillée de la réalisation.</p>
+            
+            <div class="project-details-grid" style="margin-bottom: 4rem;">
+                <!-- Left Content: Main Image -->
+                <div class="project-main-image-container reveal">
+                    <img id="project-main-image" src="https://images.unsplash.com/photo-1613490901591-ce5840924905?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Image principale">
                 </div>
-                
-                <div class="project-gallery reveal">
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Intérieur projet">
+
+                <!-- Right Content: Text and Meta -->
+                <div class="project-text-content reveal" style="transition-delay: 0.2s;">
+                    <h1 id="project-title">Titre du Projet</h1>
+                    <h2 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">À propos de cette réalisation</h2>
+                    
+                    <div id="project-desc-container" style="color: var(--text-secondary); font-size: 1.1rem; margin-bottom: 2rem; line-height: 1.6;">
+                        <p id="project-desc">Description détaillée de la réalisation.</p>
                     </div>
-                    <div class="gallery-item">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Extérieur projet">
+                    
+                    <div class="project-meta-card" style="position: static; padding: 2rem; margin-top: 2rem;">
+                        <div class="meta-item">
+                            <h4>Type d'Intervention</h4>
+                            <p id="project-role">Mission d'Architecture complète</p>
+                        </div>
+                        <div class="meta-item" id="meta-collab-container" style="display: none;">
+                            <h4>Collaborateurs</h4>
+                            <p id="project-collab"></p>
+                        </div>
+                        <div class="meta-item" id="meta-statut-container">
+                            <h4>Statut</h4>
+                            <p id="project-statut">Achevé</p>
+                        </div>
+                        <div class="meta-item" id="meta-peb-container" style="display: none;">
+                            <h4>Performance Énergétique</h4>
+                            <p id="project-peb"></p>
+                        </div>
+                        <div class="meta-item">
+                            <h4>Localisation</h4>
+                            <p id="project-loc">Bruxelles Environ</p>
+                        </div>
+                        <a href="index.html#contact" class="btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Lancer votre projet</a>
                     </div>
                 </div>
             </div>
 
-            <!-- Right Sidebar -->
-            <div class="project-meta sidebar reveal" style="transition-delay: 0.2s;">
-                <div class="project-meta-card">
-                    <div class="meta-item">
-                        <h4>Type d'Intervention</h4>
-                        <p id="project-role">Mission d'Architecture complète</p>
-                    </div>
-                    <div class="meta-item" id="meta-collab-container" style="display: none;">
-                        <h4>Collaborateurs</h4>
-                        <p id="project-collab"></p>
-                    </div>
-                    <div class="meta-item" id="meta-statut-container">
-                        <h4>Statut</h4>
-                        <p id="project-statut">Achevé</p>
-                    </div>
-                    <div class="meta-item" id="meta-peb-container" style="display: none;">
-                        <h4>Performance Énergétique</h4>
-                        <p id="project-peb"></p>
-                    </div>
-                    <div class="meta-item">
-                        <h4>Localisation</h4>
-                        <p id="project-loc">Bruxelles Environ</p>
-                    </div>
-                    <a href="index.html#contact" class="btn-primary" style="width: 100%; text-align: center; margin-top: 1rem;">Lancer votre projet</a>
+            <!-- Gallery Below -->
+            <div class="project-gallery reveal">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Intérieur projet">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Extérieur projet">
                 </div>
             </div>
         </div>
