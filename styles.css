@@ -11,9 +11,9 @@
     --text-primary: #fdfdfd;
     --text-secondary: #a1a1aa;
     
-    --accent-color: #d4af37; /* Warm gold */
-    --accent-hover: #f1c40f;
-    --accent-light: rgba(212, 175, 55, 0.1);
+    --accent-color: #7ec87a; /* Vert pastel graphique */
+    --accent-hover: #5db85a;
+    --accent-light: rgba(126, 200, 122, 0.1);
 
     --border-color: rgba(255, 255, 255, 0.1);
 
@@ -115,7 +115,7 @@ h1, h2, h3, h4, .logo {
 .btn-primary:hover {
     background-color: var(--accent-hover);
     transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.2);
+    box-shadow: 0 10px 20px rgba(126, 200, 122, 0.2);
 }
 
 .btn-secondary {
@@ -218,7 +218,7 @@ h1, h2, h3, h4, .logo {
     align-items: center;
     position: relative;
     padding: 0 2rem;
-    background: radial-gradient(circle at 70% 50%, rgba(212, 175, 55, 0.05) 0%, transparent 50%);
+    background: radial-gradient(circle at 70% 50%, rgba(126, 200, 122, 0.05) 0%, transparent 50%);
 }
 
 .hero::before {

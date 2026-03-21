@@ -79,11 +79,29 @@ document.addEventListener('DOMContentLoaded', () => {
                 statut: 'En cours',
                 loc: 'à compléter',
                 img: 'images/Riv_1.png',
-                gallery: []
+                gallery: ['images/Riv_2.jpg', 'images/Riv_3.jpg']
             },
             '3': { title: 'Rénovation Urbaine', desc: 'Transformation complète d\'une maison de maître typique.', role: 'Rénovation', statut: 'Achevé', peb: 'Label A+', loc: 'Bruxelles Environ', img: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
             '4': { title: 'Espace Minimaliste', desc: 'Aménagement intérieur épuré et optimisation de l\'espace.', role: 'Architecture d\'intérieur', statut: 'Achevé', peb: 'Label A+', loc: 'Liège', img: 'https://images.unsplash.com/photo-1502672260266-1c1c24240f58?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
-            '5': { title: 'Espace Professionnel', desc: 'Conception de bureaux modernes et ergonomiques.', role: 'Conception globale', statut: 'En cours', peb: 'Label A', loc: 'Namur', img: 'https://images.unsplash.com/photo-1528909514045-2f4461f0fb98?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' }
+            '5': { title: 'Espace Professionnel', desc: 'Conception de bureaux modernes et ergonomiques.', role: 'Conception globale', statut: 'En cours', peb: 'Label A', loc: 'Namur', img: 'https://images.unsplash.com/photo-1528909514045-2f4461f0fb98?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80' },
+            '6': {
+                title: 'Tram Vitalis',
+                descHTML: '<p>Description du projet Tram Vitalis à compléter.</p>',
+                role: 'Architecture',
+                statut: 'En cours',
+                loc: 'à compléter',
+                img: 'images/Vitalis_1.png',
+                gallery: ['images/Vitalis_2.png', 'images/Vitalis_3.png', 'images/Vitalis_4.png', 'images/Vitalis_5.png']
+            },
+            '7': {
+                title: 'Le Pleureur',
+                descHTML: '<p>Description du projet Le Pleureur à compléter.</p>',
+                role: 'Architecture',
+                statut: 'En cours',
+                loc: 'à compléter',
+                img: 'images/Pleureur_1.png',
+                gallery: ['images/Pleureur_2.png', 'images/Pleureur_3.png']
+            }
         };
 
         const proj = projects[projectId];
